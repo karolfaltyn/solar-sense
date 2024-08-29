@@ -1,9 +1,10 @@
 interface Props {
   content: string;
   variant?: "primary" | "secondary" | "danger";
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-export const Button = ({ content, variant = "primary" }: Props) => {
+export const Button = ({ content, variant = "primary", onClick }: Props) => {
   let buttonStyle = "";
 
   switch (variant) {
@@ -23,6 +24,7 @@ export const Button = ({ content, variant = "primary" }: Props) => {
   return (
     <button
       className={`rounded border px-3 py-1 font-medium hover:bg-opacity-25 ${buttonStyle}`}
+      onClick={onClick}
     >
       {content}
     </button>
