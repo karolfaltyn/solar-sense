@@ -26,7 +26,7 @@ export const ApiProvider: React.FC<{ children: ReactNode }> = ({
       const result = await response.json();
 
       if (!isValidApiData(result)) {
-        throw new Error("Invalid API data structure");
+        throw new Error("Invalid data");
       }
 
       if (!result.success) {

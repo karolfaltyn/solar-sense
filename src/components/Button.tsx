@@ -9,21 +9,21 @@ export const Button = ({ content, variant = "primary", onClick }: Props) => {
 
   switch (variant) {
     case "primary":
-      buttonStyle = "bg-[#63CFEA] text-white border-[#009CD1]";
+      buttonStyle = "bg-darkBlue text-white";
       break;
     case "secondary":
-      buttonStyle = "bg-[#F0F0F0] text-[#2A2A2A] border-[#009CD1]";
+      buttonStyle = "bg-finalBackground text-darkGray border";
       break;
     case "danger":
-      buttonStyle = "bg-[#9C0000] text-white border-[#4B0803]";
+      buttonStyle = "bg-red text-white";
       break;
     default:
-      buttonStyle = "bg-[#63CFEA] text-white border-[#009CD1]";
+      buttonStyle = "bg-darkBlue text-white";
   }
 
   return (
     <button
-      className={`rounded border px-3 py-1 font-medium hover:bg-opacity-25 ${buttonStyle}`}
+      className={`h-[35px] w-full rounded-md px-3 py-1 font-medium hover:bg-opacity-85 ${buttonStyle}`}
       onClick={onClick}
     >
       {content}

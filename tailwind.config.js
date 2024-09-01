@@ -11,10 +11,11 @@ export default {
     },
     extend: {
       colors: {
-        finalBackground: "#F0F6F7",
-        background: "#FCFCFC",
-        gray: "#2A2A2A",
-        darkGray: "#161616",
+        finalBackground: "#efefef",
+        background: "#ffffff",
+        gray: "#8a8a8a",
+        darkGray: "#2A2A2A",
+        grayBg: "#161616",
 
         blue: "#63CFEA",
         darkBlue: "#009CD1",
@@ -24,6 +25,9 @@ export default {
         darkYellow: "#F0BF1E",
         red: "#9C0000",
         darkRed: "#4B0803",
+      },
+      screens: {
+        xs: "480px",
       },
     },
   },

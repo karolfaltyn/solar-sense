@@ -17,15 +17,16 @@ export const LogInForm = () => {
 
   return (
     <>
-      <div className="container flex flex-col items-center">
-        <div className="mt-16 flex flex-col gap-4 rounded-md bg-background p-8 shadow-md">
-          <h1 className="text-center text-5xl">Solar Sense</h1>
-          <p className="text-center sm:mb-6">
-            Insert data from Solax Cloud. ?help
-          </p>
+      <div className="xs:w-96 container flex w-[90vw] flex-col">
+        <div className="mt-16 flex flex-col gap-2 rounded-md bg-background p-8 shadow-md">
+          <h1 className="text-2xl font-semibold text-darkGray">
+            Check production
+          </h1>
+          <hr />
+          <p className="mb-4 text-gray">Type data from Solax Cloud.</p>
 
-          <div className="flex flex-col items-center gap-4">
-            <div className="mb-4 flex flex-col items-end gap-4">
+          <div className="flex flex-col items-center gap-10">
+            <div className="flex w-full flex-col items-end gap-4">
               <Input
                 content="TokenID"
                 id="tokenId"
@@ -45,14 +46,14 @@ export const LogInForm = () => {
 
             <Button
               content="Show data"
-              variant="danger"
+              variant="primary"
               onClick={handleFetchData}
             />
           </div>
 
           {loading && <p className="text-center">Loading...</p>}
 
-          {error && <p className="text-center">{error}</p>}
+          {error && <p className="text-center text-red">{error}</p>}
 
           {data && (
             <div>
