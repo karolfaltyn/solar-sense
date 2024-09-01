@@ -17,8 +17,8 @@ export const LogInForm = () => {
 
   return (
     <>
-      <div className="xs:w-96 container flex w-[90vw] flex-col">
-        <div className="mt-16 flex flex-col gap-2 rounded-md bg-background p-8 shadow-md">
+      <div className="xs:w-96 flex w-[90vw] flex-col">
+        <div className="my-8 flex flex-col gap-2 rounded-md bg-background p-8 shadow-md md:mt-16">
           <h1 className="text-2xl font-semibold text-darkGray">
             Check production
           </h1>
@@ -31,7 +31,7 @@ export const LogInForm = () => {
                 content="TokenID"
                 id="tokenId"
                 value={tokenId}
-                placeholder="test"
+                placeholder="23-digit code"
                 onChange={(e) => setTokenId(e.target.value)}
               />
 
@@ -39,7 +39,7 @@ export const LogInForm = () => {
                 content="SN"
                 id="sn"
                 value={sn}
-                placeholder="test"
+                placeholder="10-digit code"
                 onChange={(e) => setSn(e.target.value)}
               />
             </div>
