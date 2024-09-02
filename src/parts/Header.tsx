@@ -1,8 +1,10 @@
 export const Header = () => {
   return (
-    <header className="flex flex-col">
-      <h1 className="py-4 text-5xl font-medium text-darkGray">Solar Sense</h1>
-      <p className="xs:w-[35ch] text-wrap- font-medium text-gray sm:w-[40ch] lg:w-[60ch]">
+    <div className="flex flex-col">
+      <header>
+        <h1 className="text-center py-4 text-5xl font-medium text-darkGray md:text-left">Solar Sense</h1>
+      </header>
+      <p className="text-wrap- font-medium text-gray xs:w-[35ch] sm:w-[40ch] lg:w-[60ch]">
         Monitor your SolaX PV system. <br /> To enter, you need two parameters
         TokenID and SN, which you can find{" "}
         <a
@@ -16,6 +18,6 @@ export const Header = () => {
         For testing purposes, I also created a demo version that does not
         require any data - here.
       </p>
-    </header>
+    </div>
   );
 };

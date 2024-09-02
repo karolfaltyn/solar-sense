@@ -5,7 +5,7 @@ import { Input } from "../components/radix/Input";
 import { Button } from "../components/Button";
 
 export const LogInForm = () => {
-  const { data, loading, error, fetchData } = useApiContext();
+  const { error, fetchData } = useApiContext();
   const [tokenId, setTokenId] = useState("");
   const [sn, setSn] = useState("");
 
@@ -17,7 +17,7 @@ export const LogInForm = () => {
 
   return (
     <>
-      <div className="xs:w-96 flex w-[90vw] flex-col">
+      <div className="flex w-[90vw] flex-col xs:w-96">
         <div className="my-8 flex flex-col gap-2 rounded-md bg-background p-8 shadow-md md:mt-16">
           <h1 className="text-2xl font-semibold text-darkGray">
             Check production
@@ -51,22 +51,7 @@ export const LogInForm = () => {
             />
           </div>
 
-          {loading && <p className="text-center">Loading...</p>}
-
           {error && <p className="text-center text-red">{error}</p>}
-
-          {data && (
-            <div>
-              {typeof data.result === "object" && data.result !== null ? (
-                <>
-                  <p>Inverter SN: {data.result.inverterSN}</p>
-                  <p>Yield Today: {data.result.yieldtoday}</p>
-                </>
-              ) : (
-                <p>Invalid data format</p>
-              )}
-            </div>
-          )}
         </div>
       </div>
     </>

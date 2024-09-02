@@ -4,19 +4,22 @@ interface Props {
   onClick: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-export const Button = ({ content, variant = "primary", onClick }: Props) => {
+export const Button = ({ content, variant, onClick }: Props) => {
   let buttonStyle = "";
 
   switch (variant) {
     case "primary":
       buttonStyle = "bg-darkBlue text-white";
       break;
+
     case "secondary":
       buttonStyle = "bg-finalBackground text-darkGray border";
       break;
+
     case "danger":
       buttonStyle = "bg-red text-white";
       break;
+
     default:
       buttonStyle = "bg-darkBlue text-white";
   }

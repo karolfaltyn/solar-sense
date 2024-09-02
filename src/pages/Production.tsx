@@ -1,6 +1,6 @@
 import { useApiContext } from "../services/ApiService";
 import { Box } from "../components/Box";
-import { formatDate } from "../utils/date-formating";
+import { formatDate } from "../utils/date-formatting";
 
 export const Production = () => {
   const { data } = useApiContext();
