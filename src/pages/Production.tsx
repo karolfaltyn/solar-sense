@@ -1,33 +1,58 @@
 import { useApiContext } from "../services/ApiService";
+import { Box } from "../components/Box";
+import { formatDate } from "../utils/date-formating";
 
 export const Production = () => {
   const { data } = useApiContext();
 
   return (
-    <div className="container">
+    <div className="container my-8 max-w-[1000px]">
       {data && (
-        <div className="grid-container">
+        <div className="grid grid-cols-3 gap-4">
           {typeof data.result === "object" && data.result !== null ? (
             <>
-              <div className="grid-item">{data.result.uploadTime}</div>
+              <Box
+                massage="Date and time of data collection "
+                context={formatDate(data.result.uploadTime)}
+                variant="2xy"
+              />
 
-              <div className="grid-item">{data.result.acpower}</div>
+              <Box
+                massage="PV Power"
+                context={data.result.acpower}
+                extraStyle="border border-2 border-yellow"
+              />
 
-              <div className="grid-item">{data.result.yieldtoday}</div>
+              <Box
+                massage="Yeld Today"
+                context={data.result.yieldtoday}
+                extraStyle="border border-2 border-darkYellow"
+              />
 
-              <div className="grid-item">{data.result.yieldtotal}</div>
+              <Box
+                massage="Yeld Total"
+                context={data.result.yieldtotal}
+                variant="2xy"
+                extraStyle="border border-2 border-darkGreen"
+              />
 
-              <div className="grid-item">
-                {data?.result?.consumeenergy === 0
-                  ? "--"
-                  : data?.result?.consumeenergy}
-              </div>
+              <Box
+                massage="Consume Energy"
+                context={
+                  data?.result?.consumeenergy === 0
+                    ? "--"
+                    : data?.result?.consumeenergy
+                }
+              />
 
-              <div className="grid-item">
-                {data?.result?.feedinpower === 0
-                  ? "--"
-                  : data?.result?.feedinpower}
-              </div>
+              <Box
+                massage="Feed in Energy"
+                context={
+                  data?.result?.feedinpower === 0
+                    ? "--"
+                    : data?.result?.feedinpower
+                }
+              />
             </>
           ) : (
             <p>Invalid data format</p>
