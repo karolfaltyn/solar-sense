@@ -19,12 +19,13 @@ export default {
 
         blue: "#63CFEA",
         darkBlue: "#009CD1",
-        green: "#79E381",
+        green: "#8dbb71",
         darkGreen: "#48C353",
-        yellow: "#F5DF41",
+        yellow: "#dfca64",
         darkYellow: "#F0BF1E",
         red: "#9C0000",
         darkRed: "#4B0803",
+        purple: "#9c84a6",
       },
       screens: {
         xs: "480px",

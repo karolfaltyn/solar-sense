@@ -12,28 +12,23 @@ export const Production = () => {
           {typeof data.result === "object" && data.result !== null ? (
             <>
               <Box
-                massage="Date and time of data collection "
+                massage="Time"
                 context={formatDate(data.result.uploadTime)}
-                variant="2xy"
               />
 
               <Box
                 massage="PV Power"
-                context={data.result.acpower}
-                extraStyle="border border-2 border-yellow"
+                context={data.result.acpower + ""}
+                units="W"
+                variant="xy 2xy"
+                extraStyle="text-darkYellow"
               />
 
               <Box
                 massage="Yeld Today"
                 context={data.result.yieldtoday}
-                extraStyle="border border-2 border-darkYellow"
-              />
-
-              <Box
-                massage="Yeld Total"
-                context={data.result.yieldtotal}
-                variant="2xy"
-                extraStyle="border border-2 border-darkGreen"
+                units="kWh"
+                extraStyle="text-green"
               />
 
               <Box
@@ -43,6 +38,8 @@ export const Production = () => {
                     ? "--"
                     : data?.result?.consumeenergy
                 }
+                units="kWh"
+                extraStyle="text-red"
               />
 
               <Box
@@ -52,6 +49,16 @@ export const Production = () => {
                     ? "--"
                     : data?.result?.feedinpower
                 }
+                units="kWh"
+                extraStyle="text-darkBlue"
+              />
+
+              <Box
+                massage="Yeld Total"
+                context={data.result.yieldtotal}
+                units="MWh"
+                variant="xy 3xy"
+                extraStyle="text-purple"
               />
             </>
           ) : (
