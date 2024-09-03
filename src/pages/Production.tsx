@@ -18,10 +18,16 @@ export const Production = () => {
 
               <Box
                 massage="PV Power"
-                context={data.result.acpower + ""}
+                context={data.result.acpower}
                 units="W"
-                variant="xy 2xy"
+                variant="x2y 2x2y"
                 extraStyle="text-darkYellow"
+                extraData={[
+                  data.result.powerdc1,
+                  data.result.powerdc2,
+                  data.result.powerdc3,
+                  data.result.powerdc4,
+                ]}
               />
 
               <Box
