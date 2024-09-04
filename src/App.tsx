@@ -4,6 +4,7 @@ import { Navbar } from "./parts/Navbar";
 import { Footer } from "./parts/Footer";
 import { Home } from "./pages/Home";
 import { Production } from "./pages/Production";
+import { Error } from "./pages/Error";
 
 export const App = () => {
   return (
@@ -14,7 +15,7 @@ export const App = () => {
           <Routes>
             <Route index element={<Home />} />
             <Route path="production" element={<Production />} />
-            {/* <Route path="*" element={<ErrorPage />} /> */}
+            <Route path="*" element={<Error />} />
           </Routes>
         </main>
         <Footer />
