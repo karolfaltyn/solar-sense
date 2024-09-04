@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useApiContext } from "../services/ApiService";
+import { useNavigate } from "react-router-dom";
 
 import { Input } from "../components/radix/Input";
 import { Button } from "../components/Button";
@@ -13,6 +14,12 @@ export const LogInForm = () => {
     if (tokenId && sn) {
       fetchData(tokenId, sn);
     }
+  };
+
+  const navigate = useNavigate();
+
+  const goToProduction = () => {
+    navigate("/production");
   };
 
   return (
@@ -47,7 +54,10 @@ export const LogInForm = () => {
             <Button
               content="Show data"
               variant="primary"
-              onClick={handleFetchData}
+              onClick={() => {
+                handleFetchData();
+                goToProduction();
+              }}
             />
           </div>
 
