@@ -1,7 +1,7 @@
 interface Props {
   content: string;
   variant?: "primary" | "secondary" | "danger";
-  onClick: React.MouseEventHandler<HTMLButtonElement>;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 export const Button = ({ content, variant, onClick }: Props) => {
