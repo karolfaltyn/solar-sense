@@ -83,7 +83,11 @@ export const Box = ({
         .map((value, index) => (
           <React.Fragment key={index}>
             <div>
-              {value.toString()} <span className="text-xs">{units}</span>{" "}
+              <p className="text-black">
+                {index + 1}.{" "}
+                <span className={`${extraStyle}`}>{value.toString()}</span>
+                <span className={`text-xs ${extraStyle}`}> {units}</span>{" "}
+              </p>
             </div>
           </React.Fragment>
         ))}

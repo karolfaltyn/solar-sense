@@ -12,7 +12,7 @@ export const Production = () => {
           {typeof data.result === "object" && data.result !== null ? (
             <>
               <Box
-                massage="Time"
+                massage="Data Time"
                 context={formatDate(data.result.uploadTime)}
               />
 
@@ -38,7 +38,7 @@ export const Production = () => {
               />
 
               <Box
-                massage="Consume Energy"
+                massage="Consumed Energy"
                 context={
                   data?.result?.consumeenergy === 0
                     ? "--"
