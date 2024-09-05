@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "../components/Button";
-import img_bg from "../../public/assets/images/owl-bg.jpg";
+import img_bg from "/assets/images/owl-bg.jpg";
 
 export const Error = () => {
   return (

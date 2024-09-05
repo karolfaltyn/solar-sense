@@ -1,6 +1,6 @@
 import { Header } from "../parts/Header";
 import { LogInForm } from "../parts/LogInForm";
-import img_bg from "../../public/assets/images/pv-bg.jpg";
+import img_bg from "/assets/images/pv-bg.jpg";
 
 export const Home = () => {
   return (
