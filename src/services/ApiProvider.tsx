@@ -15,9 +15,19 @@ export const ApiProvider: React.FC<{ children: ReactNode }> = ({
     setError(null);
 
     try {
-      const response = await fetch(
-        `https://global.solaxcloud.com/proxyApp/proxy/api/getRealtimeInfo.do?tokenId=${encodeURIComponent(tokenId)}&sn=${encodeURIComponent(sn)}`,
-      );
+      // proxy server url
+      const proxyUrl = "https://karolfaltyn-proxy-server.vercel.app/api/proxy";
+
+      // api url
+      const apiUrl = `https://global.solaxcloud.com/proxyApp/proxy/api/getRealtimeInfo.do?tokenId=${encodeURIComponent(tokenId)}&sn=${encodeURIComponent(sn)}`;
+
+      const response = await fetch(proxyUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ url: apiUrl }),
+      });
 
       if (!response.ok) {
         throw new Error("Network response was not ok");
