@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useApiContext } from "../services/ApiService";
 import { useNavigate } from "react-router-dom";
 
+import { useTranslation } from "react-i18next";
+
 import { Input } from "../components/radix/Input";
 import { Button } from "../components/Button";
 
@@ -22,15 +24,17 @@ export const LogInForm = () => {
     navigate("/production");
   };
 
+  const { t } = useTranslation();
+
   return (
     <>
       <div className="flex w-[90vw] flex-col xs:w-96">
         <div className="my-8 flex flex-col gap-2 rounded-md bg-background p-8 shadow-md md:mt-16">
           <h1 className="text-2xl font-semibold text-darkGray">
-            Check production
+            {t("form.title")}
           </h1>
           <hr />
-          <p className="mb-4 text-gray">Type data from Solax Cloud.</p>
+          <p className="mb-4 text-gray"> {t("form.desc")}</p>
 
           <div className="flex flex-col items-center gap-10">
             <div className="flex w-full flex-col items-end gap-4">
@@ -38,7 +42,7 @@ export const LogInForm = () => {
                 content="TokenID"
                 id="tokenId"
                 value={tokenId}
-                placeholder="23-digit code"
+                placeholder={t("form.placeholder")}
                 onChange={(e) => setTokenId(e.target.value)}
               />
 
@@ -46,13 +50,13 @@ export const LogInForm = () => {
                 content="SN"
                 id="sn"
                 value={sn}
-                placeholder="10-digit code"
+                placeholder={t("form.placeholder2")}
                 onChange={(e) => setSn(e.target.value)}
               />
             </div>
 
             <Button
-              content="Show data"
+              content={t("form.button")}
               variant="primary"
               onClick={() => {
                 handleFetchData();

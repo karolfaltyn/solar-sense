@@ -1,0 +1,28 @@
+{
+    "header": {
+        "desc": "Monitoruj swoją instalację PV SolaX. Do zalogowania potrzebujesz dwóch parametrów TokenID i SN. Zobacz gdzie je znaleźć tutaj - ",
+        "desc2": "Jeśli chcesz zobaczyć aplikację, nie mając instalacji PV kliknij -  "
+    },
+    "form": {
+        "title": "Sprawdź produkcję",
+        "desc": "Wprowadź dane z Solax Cloud.",
+        "placeholder": "23-cyfrowy kod",
+        "placeholder2": "10-cyfrowy kod",
+        "button": "Pokaż dane"
+    },
+    "production": {
+        "time": "Czas danych",
+        "pvpower": "Moc PV",
+        "ytoday": "Produkcja dzisiaj",
+        "consumed": "Zużyta energia",
+        "feed": "Energia wprowadzona",
+        "ytotal": "Produkcja całkowita"
+    },
+    "footer": {
+        "author": "Autor"
+    },
+    "error": {
+        "desc": "Strona nie znaleziona",
+        "button": "Powrót"
+    }
+}

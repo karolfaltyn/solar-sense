@@ -2,7 +2,11 @@ import { useApiContext } from "../services/ApiService";
 import { Box } from "../components/Box";
 import { formatDate } from "../utils/date-formatting";
 
+import { useTranslation } from "react-i18next";
+
 export const Production = () => {
+  const { t } = useTranslation();
+
   const { data } = useApiContext();
 
   return (
@@ -12,12 +16,12 @@ export const Production = () => {
           {typeof data.result === "object" && data.result !== null ? (
             <>
               <Box
-                massage="Data Time"
+                massage={t("production.time")}
                 context={formatDate(data.result.uploadTime)}
               />
 
               <Box
-                massage="PV Power"
+                massage={t("production.pvpower")}
                 context={data.result.acpower}
                 units="W"
                 variant="x2y 2x2y"
@@ -31,14 +35,14 @@ export const Production = () => {
               />
 
               <Box
-                massage="Yeld Today"
+                massage={t("production.ytoday")}
                 context={data.result.yieldtoday}
                 units="kWh"
                 extraStyle="text-green"
               />
 
               <Box
-                massage="Consumed Energy"
+                massage={t("production.consumed")}
                 context={
                   data?.result?.consumeenergy === 0
                     ? "--"
@@ -49,7 +53,7 @@ export const Production = () => {
               />
 
               <Box
-                massage="Feed in Energy"
+                massage={t("production.feed")}
                 context={
                   data?.result?.feedinpower === 0
                     ? "--"
@@ -60,7 +64,7 @@ export const Production = () => {
               />
 
               <Box
-                massage="Yeld Total"
+                massage={t("production.ytotal")}
                 context={data.result.yieldtotal}
                 units="MWh"
                 variant="xy 3xy"
