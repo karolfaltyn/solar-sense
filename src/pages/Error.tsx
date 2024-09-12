@@ -13,8 +13,12 @@ export const Error = () => {
         className="flex h-[100%] w-full flex-col items-center justify-center bg-cover bg-center"
         style={{ backgroundImage: `url(${img_bg})` }}
       >
-        <h1 className="py-4 text-5xl font-medium text-darkGray">Oops!</h1>
-        <p className="text-2xl font-semibold text-white">{t("error.desc")}</p>
+        <h1 className="py-4 text-5xl font-medium text-darkGray [text-shadow:_0_1px_0_rgb(0_0_0_/_100%)]">
+          Oops!
+        </h1>
+        <p className="text-2xl font-semibold text-white [text-shadow:_0_1px_0_rgb(0_0_0_/_100%)]">
+          {t("error.desc")}
+        </p>
         <Link to="/">
           <p className="w-64 p-4 font-medium uppercase tracking-widest">
             <Button content={t("error.button")} variant="primary" />

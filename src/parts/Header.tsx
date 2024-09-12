@@ -6,11 +6,11 @@ export const Header = () => {
   return (
     <div className="flex flex-col rounded-md p-4 backdrop-blur-sm">
       <header>
-        <h1 className="py-4 text-center text-5xl font-medium text-darkGray md:text-left">
+        <h1 className="py-4 text-center text-5xl font-medium text-white [text-shadow:_0_1px_0_rgb(0_0_0_/_100%)] md:text-left">
           Solar Sense
         </h1>
       </header>
-      <p className="text-wrap font-medium text-white xs:w-[35ch] sm:w-[40ch] lg:w-[60ch]">
+      <p className="text-wrap font-medium text-white [text-shadow:_0_1px_0_rgb(0_0_0_/_80%)] xs:w-[35ch] sm:w-[40ch] lg:w-[60ch]">
         {t("header.desc")}
         <a
           className="text-darkBlue underline"
