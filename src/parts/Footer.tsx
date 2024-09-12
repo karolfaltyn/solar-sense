@@ -15,7 +15,7 @@ export const Footer = () => {
           id="language"
           onChange={(e) => changeLanguage(e.target.value)}
           value={i18n.language}
-          className="border-gray-300 block rounded-md border bg-white p-2 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+          className="block rounded-md bg-grayBg p-2 text-white shadow-sm focus:outline-none sm:text-sm"
         >
           <option value="en">English</option>
           <option value="pl">Polski</option>
