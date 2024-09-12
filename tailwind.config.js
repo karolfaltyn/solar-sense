@@ -30,6 +30,10 @@ export default {
       screens: {
         xs: "480px",
       },
+      fontFamily: {
+        sans: ["Roboto", "Arial", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
+      },
     },
   },
   plugins: [],
