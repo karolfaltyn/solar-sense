@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   const { t } = useTranslation();
@@ -6,7 +7,7 @@ export const Header = () => {
   return (
     <div className="flex flex-col rounded-md p-4 backdrop-blur-sm">
       <header>
-        <h1 className="font-montserrat py-4 text-center text-5xl text-white [text-shadow:_0_1px_0_rgb(0_0_0_/_100%)] md:text-left">
+        <h1 className="py-4 text-center font-montserrat text-5xl text-white [text-shadow:_0_1px_0_rgb(0_0_0_/_100%)] md:text-left">
           Solar Sense
         </h1>
       </header>
@@ -21,6 +22,9 @@ export const Header = () => {
         </a>
         <br /> <br />
         {t("header.desc2")}
+        <Link to="/demo" className="text-darkGreen underline">
+          Demo
+        </Link>
       </p>
     </div>
   );

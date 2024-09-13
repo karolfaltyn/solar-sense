@@ -55,9 +55,9 @@ export const Production = () => {
               <Box
                 massage={t("production.feed")}
                 context={
-                  data?.result?.feedinpower === 0
+                  data?.result?.feedinenergy === 0
                     ? "--"
-                    : data?.result?.feedinpower
+                    : data?.result?.feedinenergy
                 }
                 units="kWh"
                 extraStyle="text-darkBlue"
