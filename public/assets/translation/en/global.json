@@ -17,7 +17,8 @@
         "consumed": "Consumed Energy",
         "feed": "Feed in Energy",
         "ytotal": "Yeld Total",
-        "extraInfo": "If some information is unavailable to you, it means that you probably do not have an energy meter. Remember that it is not needed for the installation to work, you simply will not see some information."
+        "info": "Information",
+        "extraInfo": "If some data is unavailable to you, it probably means that you do not have an energy meter. Remember that it is not needed for the installation to work, you simply will not see some parameters."
     },
     "footer": {
         "author": "Author"
@@ -25,6 +26,10 @@
     "error": {
         "desc": "Page not found",
         "button": "Let's go back."
+    },
+    "errorCode": {
+        "1": "Network response was not ok",
+        "2": "Invalid data",
+        "3": "Invalid SN number"
     }
-    
 }

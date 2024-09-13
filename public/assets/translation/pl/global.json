@@ -17,7 +17,8 @@
         "consumed": "Zużyta energia",
         "feed": "Energia wprowadzona",
         "ytotal": "Produkcja całkowita",
-        "extraInfo": "Jeśli jakieś informacje są dla Ciebie niedostępne, oznacza to, że prawdopodobnie nie masz licznika energii. Pamiętaj że nie jest on potrzebny do działania instalacji, poprostu nie będziesz widział części informacji."
+        "info": "Informacja",
+        "extraInfo": "Jeśli jakieś dane są dla Ciebie niedostępne, oznacza to, że prawdopodobnie nie masz licznika energii. Pamiętaj że nie jest on potrzebny do działania instalacji, poprostu nie będziesz widział części parametrów."
     },
     "footer": {
         "author": "Autor"
@@ -25,5 +26,10 @@
     "error": {
         "desc": "Strona nie znaleziona",
         "button": "Powrót"
+    },
+    "errorCode": {
+        "1": "Odpowiedź sieciowa była niepoprawna",
+        "2": "Nieprawidłowe dane",
+        "3": "Nieprawidłowy numer SN"
     }
 }

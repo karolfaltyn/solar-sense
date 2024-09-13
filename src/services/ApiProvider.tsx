@@ -3,9 +3,13 @@ import ApiContext from "./ApiContext";
 import { ApiDataType } from "../data/api-data-type";
 import { isValidApiData } from "../utils/data-validation";
 
+import { useTranslation } from "react-i18next";
+
 export const ApiProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
+  const { t } = useTranslation();
+
   const [data, setData] = useState<ApiDataType | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -30,17 +34,20 @@ export const ApiProvider: React.FC<{ children: ReactNode }> = ({
       });
 
       if (!response.ok) {
-        throw new Error("Network response was not ok");
+        const errorMessage = t("errorCode.1");
+        throw new Error(errorMessage);
       }
 
       const result = await response.json();
 
       if (!isValidApiData(result)) {
-        throw new Error("Invalid data");
+        const errorMessage = t("errorCode.2");
+        throw new Error(errorMessage);
       }
 
       if (!result.success) {
-        throw new Error("Invalid SN number.");
+        const errorMessage = t("errorCode.3");
+        throw new Error(errorMessage);
       }
 
       setData(result);
