@@ -18,7 +18,7 @@ export const Production = () => {
       {!showComponents ? (
         <div className="flex h-full items-center justify-center">
           <img
-            src="./public/assets/images/loading.gif"
+            src="./assets/images/loading.gif"
             alt="Loading..."
             className="h-16 w-16"
           />
