@@ -1,7 +1,7 @@
 {
     "header": {
         "desc": "Monitor your SolaX PV system. To enter, you need two parameters TokenID and SN. Where to find them, check here - ",
-        "desc2": "If you want to see the application without having a PV installation, click -"
+        "desc2": "If you want to see the application without having a PV installation, click - "
     },
     "form": {
         "title": "Check production",

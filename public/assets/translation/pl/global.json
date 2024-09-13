@@ -1,7 +1,7 @@
 {
     "header": {
         "desc": "Monitoruj swoją instalację PV SolaX. Do zalogowania potrzebujesz dwóch parametrów TokenID i SN. Zobacz gdzie je znaleźć tutaj - ",
-        "desc2": "Jeśli chcesz zobaczyć aplikację, nie mając instalacji PV kliknij -  "
+        "desc2": "Jeśli chcesz zobaczyć aplikację, nie mając instalacji PV kliknij - "
     },
     "form": {
         "title": "Sprawdź produkcję",
