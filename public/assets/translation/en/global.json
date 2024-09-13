@@ -16,7 +16,8 @@
         "ytoday": "Yeld Today",
         "consumed": "Consumed Energy",
         "feed": "Feed in Energy",
-        "ytotal": "Yeld Total"
+        "ytotal": "Yeld Total",
+        "extraInfo": "If some information is unavailable to you, it means that you probably do not have an energy meter. Remember that it is not needed for the installation to work, you simply will not see some information."
     },
     "footer": {
         "author": "Author"

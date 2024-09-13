@@ -1,5 +1,6 @@
 import { Box } from "../components/Box";
 import { formatDate } from "../utils/date-formatting";
+import { DataInfo } from "../parts/DataInfo";
 
 import demoData from "../data/demo-data.json";
 import { DemoData } from "../data/demo-type";
@@ -67,6 +68,7 @@ export const DemoProduction = () => {
           extraStyle="text-purple"
         />
       </div>
+      <DataInfo />
     </div>
   );
 };

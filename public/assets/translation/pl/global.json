@@ -16,7 +16,8 @@
         "ytoday": "Produkcja dzisiaj",
         "consumed": "Zużyta energia",
         "feed": "Energia wprowadzona",
-        "ytotal": "Produkcja całkowita"
+        "ytotal": "Produkcja całkowita",
+        "extraInfo": "Jeśli jakieś informacje są dla Ciebie niedostępne, oznacza to, że prawdopodobnie nie masz licznika energii. Pamiętaj że nie jest on potrzebny do działania instalacji, poprostu nie będziesz widział części informacji."
     },
     "footer": {
         "author": "Autor"
