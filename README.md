@@ -7,8 +7,11 @@ Solar Sense is a modern application designed to help users monitor the performan
 ## Features
 
 -   **Real-time Solar Data Monitoring**: Access real-time data on energy production from your photovoltaic (PV) installation.
+
 -   **Multi-Language Support**: Seamlessly switch between Polish and English for a localized user experience.
+
 -   **Demo Mode**: Try the app in demo mode if you don’t have a solar installation, giving potential users a preview of the features.
+
 -   **Responsive Design**: The app is fully responsive, ensuring an optimal experience on both desktop and mobile devices.
 
 ## Getting Started
@@ -63,11 +66,17 @@ Follow these steps to set up the Solar Sense App on your local machine:
 ## Technologies Used
 
 -   **React**: For building the interactive user interface.
+
 -   **TypeScript**: Ensures type safety and better code management.
+
 -   **Tailwind CSS**: Utility-first CSS framework for responsive and customizable design.
+
 -   **Radix UI**: Provides accessible and customizable UI components.
+
 -   **API Integration**: Fetches data from photovoltaic systems.
+
 -   **i18n (Internationalization)**: Provides multi-language support.
+
 -   **PostCSS**: For processing and optimizing CSS.
 
 ## License
