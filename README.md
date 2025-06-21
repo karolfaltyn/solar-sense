@@ -1,8 +1,11 @@
+
 # Solar Sense
 
 ## Overview
 
 Solar Sense is a modern application designed to help users monitor the performance of their solar panel installations from Solax. It allows real-time tracking of energy production. The application also supports multiple languages and features a demo mode for users without a solar installation who wish to explore its capabilities.
+
+A custom proxy server, hosted separately, is used to handle CORS issues when communicating with a third-party REST API. The frontend sends requests to the proxy, which adds required headers and forwards them to the API.
 
 ## Features
 
@@ -78,6 +81,8 @@ Follow these steps to set up the Solar Sense App on your local machine:
 -   **i18n (Internationalization)**: Provides multi-language support.
 
 -   **PostCSS**: For processing and optimizing CSS.
+
+-   **Custom External Proxy Server**: Handles CORS limitations by forwarding frontend API requests to external services with appropriate headers.
 
 ## License
 
